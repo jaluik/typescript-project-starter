@@ -1,2 +1,5 @@
+import './app.less';
+
 const root = document.querySelector('#root');
-root.innerHTML = 'hello, webpack!';
+
+root.innerHTML = '<a>hello, webpack!</a>';

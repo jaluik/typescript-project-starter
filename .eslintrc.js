@@ -46,5 +46,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-var-requires': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'global-require': 0,
   },
 };
