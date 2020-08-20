@@ -44,5 +44,7 @@ module.exports = {
         js: 'never',
       },
     ],
+    '@typescript-eslint/no-var-requires': 0,
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
