@@ -1,0 +1,7 @@
+{
+  "name": "typescript-project-starter",
+  "description": "quickly start a new react project with typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
