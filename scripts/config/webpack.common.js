@@ -4,8 +4,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackBar = require('webpackbar');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const { PROJECT_PATH, isDev } = require('../constants');
 
 const getCssLoaders = (importLoaders) => [
@@ -163,6 +165,19 @@ module.exports = {
     }),
   ],
   optimization: {
+    minimize: !isDev,
+    minimizer: [
+      !isDev &&
+        new TerserPlugin({
+          extractComments: false,
+          terserOptions: {
+            compress: {
+              pure_funcs: ['console.log'],
+            },
+          },
+        }),
+      !isDev && new OptimizeCssAssetsPlugin(),
+    ].filter(Boolean),
     splitChunks: {
       chunks: 'all',
       name: true,
