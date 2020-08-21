@@ -47,5 +47,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'global-require': 0,
+    'import/no-unresolved': 0,
+    'react/jsx-filename-extension': 0,
   },
 };
