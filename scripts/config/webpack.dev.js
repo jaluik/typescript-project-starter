@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./webpack.common');
 const { SERVER_HOST, SERVER_PORT } = require('../constants');
+const proxySetting = require('./setProxy.js');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -14,6 +15,7 @@ module.exports = merge(common, {
     stats: 'errors-only',
     compress: true,
     clientLogLevel: 'silent',
+    proxy: { ...proxySetting },
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 });
