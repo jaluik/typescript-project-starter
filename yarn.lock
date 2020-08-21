@@ -1287,6 +1287,11 @@
   resolved "https://registry.npm.taobao.org/@types/unist/download/@types/unist-2.0.3.tgz?cache=0&sync_timestamp=1596841334005&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Funist%2Fdownload%2F%40types%2Funist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha1-nAiGeYdvN061mD8VDUeHqm+zLX4=
 
+"@types/webpack-env@^1.15.2":
+  version "1.15.2"
+  resolved "https://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.15.2.tgz?cache=0&sync_timestamp=1596841290507&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fwebpack-env%2Fdownload%2F%40types%2Fwebpack-env-1.15.2.tgz#927997342bb9f4a5185a86e6579a0a18afc33b0a"
+  integrity sha1-knmXNCu59KUYWobmV5oKGK/DOwo=
+
 "@types/webpack-sources@*":
   version "1.4.2"
   resolved "https://registry.npm.taobao.org/@types/webpack-sources/download/@types/webpack-sources-1.4.2.tgz?cache=0&sync_timestamp=1596841541541&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fwebpack-sources%2Fdownload%2F%40types%2Fwebpack-sources-1.4.2.tgz#5d3d4dea04008a779a90135ff96fb5c0c9e6292c"

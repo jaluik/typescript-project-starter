@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const webpack = require('webpack');
 const common = require('./webpack.common');
 const { SERVER_HOST, SERVER_PORT } = require('../constants');
 
@@ -14,4 +15,5 @@ module.exports = merge(common, {
     compress: true,
     clientLogLevel: 'silent',
   },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 });
