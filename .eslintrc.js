@@ -47,5 +47,6 @@ module.exports = {
     'global-require': 0,
     'import/no-unresolved': 0,
     'react/jsx-filename-extension': 0,
+    'react/prop-types': 0,
   },
 };

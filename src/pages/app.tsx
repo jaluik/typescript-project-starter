@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Header from '@components/header';
 import './app.less';
 
-function App() {
+const App: FC = () => {
   return (
     <div className="App">
       <Header name="aa" />
       Hello World
     </div>
   );
-}
+};
 
 export default App;

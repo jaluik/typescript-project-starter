@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './index.less';
 
 interface IProps {
   name: string;
 }
 
-export default (props: IProps) => {
+const Component: FC<IProps> = (props) => {
   const { name } = props;
   return <div className="header">{name}</div>;
 };
+
+export default Component;
