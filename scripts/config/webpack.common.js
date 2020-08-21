@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const WebpackBar = require('webpackbar');
 const { PROJECT_PATH, isDev } = require('../constants');
 
 const getCssLoaders = (importLoaders) => [
@@ -115,6 +117,20 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          context: path.resolve(PROJECT_PATH, './public'),
+          from: '*',
+          to: path.resolve(PROJECT_PATH, './dist'),
+          toType: 'dir',
+        },
+      ],
+    }),
+    new WebpackBar({
+      name: isDev ? '正在编译' : '正在打包',
+      color: '#fa8c16',
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(PROJECT_PATH, 'public/index.html'),
       filename: 'index.html',
