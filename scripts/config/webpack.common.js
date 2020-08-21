@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackBar = require('webpackbar');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { PROJECT_PATH, isDev } = require('../constants');
 
 const getCssLoaders = (importLoaders) => [
@@ -117,6 +119,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new HardSourceWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        configFile: path.resolve(PROJECT_PATH, './tsconfig.json'),
+      },
+    }),
     new CopyPlugin({
       patterns: [
         {

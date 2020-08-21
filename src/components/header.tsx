@@ -1,5 +1,10 @@
 import React from 'react';
 
-export default () => {
-  return <div className="header">header</div>;
+interface IProps {
+  name: string;
+}
+
+export default (props: IProps) => {
+  const { name } = props;
+  return <div className="header">{name}</div>;
 };

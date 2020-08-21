@@ -9,13 +9,11 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
     'airbnb/hooks',
-    'plugin:unicorn/recommended',
     'plugin:promise/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'prettier/@typescript-eslint',
     'prettier/react',
-    'prettier/unicorn',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -32,7 +30,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['react', 'unicorn', 'promise', '@typescript-eslint'],
+  plugins: ['react', 'promise', '@typescript-eslint'],
   rules: {
     'import/extensions': [
       ERROR,
