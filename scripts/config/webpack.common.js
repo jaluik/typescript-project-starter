@@ -43,7 +43,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
+    alias: {
+      '@pages': path.resolve(PROJECT_PATH, './src/pages'),
+      '@components': path.resolve(PROJECT_PATH, './src/components'),
+      '@utils': path.resolve(PROJECT_PATH, './src/utils'),
+      '@images': path.resolve(PROJECT_PATH, './src/images'),
+    },
   },
+
   module: {
     rules: [
       {
